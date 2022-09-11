@@ -29,6 +29,17 @@ section.board {
   
 }
 
+ {
+  display: grid;
+  padding-top: 70px;
+  grid-template-columns: repeat(7, 10vmin);
+  grid-gap: 1vmin;
+  height: 50px;
+  border-radius: 50%;
+
+
+}
+
 
 div {
   border: 1px solid black;
