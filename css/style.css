@@ -51,7 +51,7 @@ div:hover {
 }
 
 h1 {
-  color:#0069ed;
+  color: black;
   text-align: center;
   font: 800 45px Arial;
   -webkit-text-fill-color: transparent;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  color:cornflowerblue;
+  color: black;
   text-align: center;
   font-size: 20px;
 
