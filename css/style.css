@@ -25,18 +25,24 @@ section.board {
   grid-template-columns: repeat(7, 10vmin);
   grid-gap: 1vmin;
   padding-top: 10px;
+  padding: 0 -15px;
+  background-color: #e6e07c;
   
   
 }
 
- {
+board {
+  background-color: #0053ba;
+}
+
+butts {
   display: grid;
   padding-top: 70px;
   grid-template-columns: repeat(7, 10vmin);
   grid-gap: 1vmin;
   height: 50px;
   border-radius: 50%;
-
+  
 
 }
 
@@ -48,6 +54,7 @@ div {
   display: block;
   background-image: url("");
   background-color: yellow;
+  border-radius: 50%;
   
 }
 
