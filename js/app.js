@@ -141,7 +141,7 @@ function handleClick(evt) {
 function getWinner() {
   let winnersCombo = false
   winningCombos.forEach(function (combo) {
-    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]]) === 3) {
+    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] board[combo[3]]) ) === 4) {
       winnersCombo = true
     }
   })
