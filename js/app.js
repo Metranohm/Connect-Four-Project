@@ -71,9 +71,8 @@ const winningCombos = [
     [11, 18, 25, 32],
     [12, 19, 26, 33],
     [13, 20, 27, 34],
-];
+]
 
-console.log(winningCombos)
 
 /*----------------------Variables (state) --------------------------*/
 
@@ -85,9 +84,7 @@ const squareEls = document.querySelectorAll(".board > div")
 const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
-const button = document.querySelector('#btn')
-console.log(button)
-button.style.border = '1px solid red'
+
 
 /*--------------------------- Event Listeners -----------------------*/
 
@@ -105,9 +102,14 @@ init()
 
 function init() {
   board =[
-    null, null, null, 
-    null, null, null,
-    null, null, null]
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    null, null, null, null, null, null,
+    ]
   console.log(board)
   turn = 1
   winner = null
@@ -155,9 +157,9 @@ function getWinner() {
 function render() {
   board.forEach(function(square, idx) {
     if (square === 1) {
-      squareEls[idx].textContent = 'X'
+      squareEls[idx].textContent = 'Black'
     } else if (square === -1) {
-      squareEls[idx].textContent = '0'
+      squareEls[idx].textContent = 'Red'
     } else {
       squareEls[idx].textContent = ''
     }
