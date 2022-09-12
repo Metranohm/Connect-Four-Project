@@ -85,7 +85,6 @@ const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
 
-
 /*--------------------------- Event Listeners -----------------------*/
 
 boardEl.addEventListener('click', handleClick) 
@@ -118,7 +117,7 @@ function init() {
 function handleClick(evt) {
   console.log(evt.target.id);
   //converts id of target div into a number (with parseInt), assigns that number to variable sqIdx
-  let sqIdx = parseInt(evt.target.id[2][4]) 
+  let sqIdx = parseInt(evt.target.id.replace('sq', ''))
   console.log(sqIdx)
 
   if (isNaN(sqIdx)) {
@@ -130,13 +129,24 @@ function handleClick(evt) {
   if (board[sqIdx]) {
     return 
   }
-  board[sqIdx] = turn 
-  console.log('board after click', board);
+  const correctIdx = checkPlacement(sqIdx)
+  console.log('correct placement', correctIdx);
+  board[correctIdx] = turn 
+  // console.log('board after click', board);
   turn = turn * -1 
-  winner = getWinner()
+  // winner = getWinner()
   render()
 }
-
+function checkPlacement(idx){
+//check column to see if another piece is already there
+//accepts spIdx as input
+//output should be next available space
+//columns scale by 7
+  console.log('bottom space', idx + 35)
+  //will fill in more later
+  //check position of board in multtples of 7 (for loop)
+return idx + 35
+}
 
 // function getWinner() {
 //   let winnersCombo = false
@@ -152,14 +162,14 @@ function handleClick(evt) {
 //     return 'T'
 //   }
 //   return null
-// }
+
 
 function render() {
   board.forEach(function(square, idx) {
     if (square === 1) {
-      squareEls[idx].textContent = 'Black'
+      squareEls[idx].style.background = 'black'
     } else if (square === -1) {
-      squareEls[idx].textContent = 'Red'
+      squareEls[idx].style.background= 'red'
     } else {
       squareEls[idx].textContent = ''
     }
