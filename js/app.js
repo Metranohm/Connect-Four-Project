@@ -1,7 +1,7 @@
 /*------------------------ Constants --------------------------------*/
 
 const winningCombos = [
-  [
+  
     [0, 1, 2, 3],
     [41, 40, 39, 38],
     [7, 8, 9, 10],
@@ -90,7 +90,6 @@ const resetBtnEl = document.querySelector('#reset-button')
 
 boardEl.addEventListener('click', handleClick) 
 resetBtnEl.addEventListener('click', init)
-button.addEventListener('click', handleBtn)
 
 /*------------------------------ Functions --------------------------*/
 
@@ -119,8 +118,9 @@ function init() {
 function handleClick(evt) {
   console.log(evt.target.id);
   //converts id of target div into a number (with parseInt), assigns that number to variable sqIdx
-  let sqIdx = parseInt(evt.target.id[2]) 
+  let sqIdx = parseInt(evt.target.id[2][4]) 
   console.log(sqIdx)
+
   if (isNaN(sqIdx)) {
     return 
   }
@@ -138,21 +138,21 @@ function handleClick(evt) {
 }
 
 
-function getWinner() {
-  let winnersCombo = false
-  winningCombos.forEach(function (combo) {
-    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]) ) === 4) {
-      winnersCombo = true
-    }
-  }
-  if (winnersCombo === true) {
-    return turn * -1
-  } else if (board.every((sq) => sq !== null)) {
-  // When checking for a tie, the every method might be more appropriate.
-    return 'T'
-  }
-  return null
-}
+// function getWinner() {
+//   let winnersCombo = false
+//   winningCombos.forEach(function (combo) {
+//     if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]) ) === 4) {
+//       winnersCombo = true
+//     }
+//   }
+//   if (winnersCombo === true) {
+//     return turn * -1
+//   } else if (board.every((sq) => sq !== null)) {
+//   // When checking for a tie, the every method might be more appropriate.
+//     return 'T'
+//   }
+//   return null
+// }
 
 function render() {
   board.forEach(function(square, idx) {
