@@ -138,8 +138,12 @@ function handleClick(evt) {
   render()
 }
 function checkPlacement(idx){
+  for (let index = 0; index < squareEls.length; index++) {
+    const element = board[index];
+    console.log(element)
+  }
 //check column to see if another piece is already there
-//accepts spIdx as input
+//accepts sqIdx as input
 //output should be next available space
 //columns scale by 7
   console.log('bottom space', idx + 35)
