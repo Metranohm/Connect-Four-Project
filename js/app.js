@@ -135,7 +135,7 @@ function handleClick(evt) {
   board[correctIdx] = turn 
   // console.log('board after click', board);
   turn = turn * -1 
-  // winner = getWinner()
+  winner = getWinner()
   render()
 }
 function checkPlacement(idx){
@@ -146,17 +146,13 @@ function checkPlacement(idx){
     render()
   }
 
-
-
-
-
 function getWinner() {
   let winnersCombo = false
   winningCombos.forEach(function (combo) {
-    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]) ) === 4) {
+    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]])  === 4) {
       winnersCombo = true
     }
-  }
+  })
   if (winnersCombo === true) {
     return turn * -1
   } else if (board.every((sq) => sq !== null)) {
@@ -164,16 +160,17 @@ function getWinner() {
     return 'T'
   }
   return null
-
+}
 
 function render() {
+console.log(board) 
   board.forEach(function(square, idx) {
     if (square === 1) {
       squareEls[idx].style.background = 'black'
     } else if (square === -1) {
       squareEls[idx].style.background= 'red'
     } else {
-      squareEls[idx].textContent = ''
+      squareEls[idx].style.background= 'yellow'
     }
   })
   if (winner === null) {
@@ -188,4 +185,4 @@ function render() {
     messageEl.textContent = "Player One Wins!"
     } else if (winner === -1)
     messageEl.textContent = "Player Two Wins!"
-}
+  }
