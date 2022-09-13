@@ -119,7 +119,8 @@ function handleClick(evt) {
   //converts id of target div into a number (with parseInt), assigns that number to variable sqIdx
   let sqIdx = parseInt(evt.target.id.replace('sq', ''))
   console.log(sqIdx)
-
+  if (sqIdx > 6)
+  return
   if (isNaN(sqIdx)) {
     return 
   }
@@ -138,34 +139,31 @@ function handleClick(evt) {
   render()
 }
 function checkPlacement(idx){
-  for (let index = 0; index < squareEls.length; index++) {
-    const element = board[index];
-    console.log(element)
+  for (let i = 7*5+idx; i >= 0; i-=7) {
+    if (board[i] === null)
+      return i 
+    }
+    render()
   }
-//check column to see if another piece is already there
-//accepts sqIdx as input
-//output should be next available space
-//columns scale by 7
-  console.log('bottom space', idx + 35)
-  //will fill in more later
-  //check position of board in multtples of 7 (for loop)
-return idx + 35
-}
 
-// function getWinner() {
-//   let winnersCombo = false
-//   winningCombos.forEach(function (combo) {
-//     if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]) ) === 4) {
-//       winnersCombo = true
-//     }
-//   }
-//   if (winnersCombo === true) {
-//     return turn * -1
-//   } else if (board.every((sq) => sq !== null)) {
-//   // When checking for a tie, the every method might be more appropriate.
-//     return 'T'
-//   }
-//   return null
+
+
+
+
+function getWinner() {
+  let winnersCombo = false
+  winningCombos.forEach(function (combo) {
+    if (Math.abs(board[combo[0]] + board[combo[1]] + board[combo[2]] + board[combo[3]]) ) === 4) {
+      winnersCombo = true
+    }
+  }
+  if (winnersCombo === true) {
+    return turn * -1
+  } else if (board.every((sq) => sq !== null)) {
+  // When checking for a tie, the every method might be more appropriate.
+    return 'T'
+  }
+  return null
 
 
 function render() {
