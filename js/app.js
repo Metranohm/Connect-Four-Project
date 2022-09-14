@@ -72,8 +72,10 @@ const winningCombos = [
     [12, 19, 26, 33],
     [13, 20, 27, 34],
 ]
-
-
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}
 /*----------------------Variables (state) --------------------------*/
 
 let board, turn, winner
@@ -84,6 +86,7 @@ const squareEls = document.querySelectorAll(".board > div")
 const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
+const favicon = document.querySelector(#favicon)
 
 /*--------------------------- Event Listeners -----------------------*/
 
@@ -130,6 +133,7 @@ function handleClick(evt) {
   if (board[sqIdx]) {
     return 
   }
+  // changeFavicon()
   const correctIdx = checkPlacement(sqIdx)
   console.log('correct placement', correctIdx);
   board[correctIdx] = turn 
@@ -156,7 +160,6 @@ function getWinner() {
   if (winnersCombo === true) {
     return turn * -1
   } else if (board.every((sq) => sq !== null)) {
-  // When checking for a tie, the every method might be more appropriate.
     return 'T'
   }
   return null
