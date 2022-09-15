@@ -14,9 +14,9 @@ Game link: https://peaceful-kashata-d078be.netlify.app/
 3. The winner is the first one to line up 4 tokens in a row vertically, horizontally or diagonally
 
 
-![alt text](assets/Screenshot%20from%202022-09-14%2015-17-31.png)
+![alt text](assets/Screenshot1.png)
 
-![alt text](assets/Screenshot%20from%202022-09-14%2015-17-40.png)
+![alt text](assets/Screenshot2.png)
 
 ### Technologies used: 
 JavaScript, HTML, CSS
