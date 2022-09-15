@@ -13,7 +13,7 @@ The winner is the first one to line up 4 tokens in a row vertically, horizontall
 
 ![alt text](assets/Screenshot%20from%202022-09-14%2015-17-31.png)
 
-![alt text](./assets/Screenshot%20from%202022-09-14%2015-17-40.png)
+![alt text](assets/Screenshot%20from%202022-09-14%2015-17-40.png)
 
 Technologies used: JavaScript, HTML, CSS
 
