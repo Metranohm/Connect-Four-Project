@@ -82,7 +82,6 @@ const squareEls = document.querySelectorAll(".board > div")
 const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
-// const favicon = document.querySelector(#changeFavicon)
 
 /*--------------------------- Event Listeners -----------------------*/
 
@@ -103,7 +102,6 @@ function init() {
     null, null, null, null, null, null,
     null, null, null, null, null, null,
     ]
-  console.log(board)
   turn = 1
   winner = null
   render()
