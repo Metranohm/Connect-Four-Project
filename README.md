@@ -17,4 +17,4 @@ The winner is the first one to line up 4 tokens in a row vertically, horizontall
 
 Technologies used: JavaScript, HTML, CSS
 
-Next Steps: add scoreboard
+Next Steps: add scoreboard to count wins 
