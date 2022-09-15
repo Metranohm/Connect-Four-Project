@@ -22,4 +22,4 @@ Game link: https://peaceful-kashata-d078be.netlify.app/
 JavaScript, HTML, CSS
 
 ### Next Steps: 
-add scoreboard to count wins 
+Add scoreboard to count wins from multiple plays
