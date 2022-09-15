@@ -126,13 +126,14 @@ function handleClick(evt) {
   winner = getWinner()
   render()
 }
+
 function checkPlacement(idx){
   for (let i = 7*5+idx; i >= 0; i-=7) {
     if (board[i] === null)
       return i 
     }
     render()
-  }
+}
 
 function getWinner() {
   let winnersCombo = false
