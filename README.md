@@ -11,9 +11,9 @@ Player 2 then does the same.
 The winner is the first one to line up 4 tokens in a row vertically, horizontally or diagonally
 
 
-![alt text](/home/metranohm/code/sei/projects/connect-four-project/assets/Screenshot from 2022-09-14 15-17-31.png)
+![alt text](./assets/Screenshot from 2022-09-14 15-17-31.png)
 
-![alt text](/home/metranohm/code/sei/projects/connect-four-project/assets/Screenshot from 2022-09-14 15-17-40.pngjpg)
+![alt text](./assets/Screenshot from 2022-09-14 15-17-40.pngjpg)
 
 Technologies used: JavaScript, HTML, CSS
 

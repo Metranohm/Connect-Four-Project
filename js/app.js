@@ -82,7 +82,7 @@ const squareEls = document.querySelectorAll(".board > div")
 const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
-// const favicon = document.querySelector(#)
+// const favicon = document.querySelector(#changeFavicon)
 
 /*--------------------------- Event Listeners -----------------------*/
 
@@ -110,7 +110,6 @@ function init() {
 }
 
 function handleClick(evt) {
-  console.log(evt.target.id);
   let sqIdx = parseInt(evt.target.id.replace('sq', ''))
   if (sqIdx > 6)
   return
