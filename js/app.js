@@ -170,10 +170,10 @@ function render() {
     messageEl.textContent = "It's a tie!"
   } else if (winner === 1) {
       messageEl.textContent = "Player One Wins!"
-      const audioElement = new Audio('./assets/Kick AdStyle 1.wav')
+      const audioElement = new Audio('./assets/SGoinOnHere.mp3')
       audioElement.play()
     } else if (winner === -1) {
       messageEl.textContent = "Player Two Wins!"
-    const audioElement = new Audio('./assets/Kick AdStyle 1.wav')
+    const audioElement = new Audio('./assets/SGoinOnHere.mp3')
       audioElement.play();}
   }
