@@ -1,9 +1,9 @@
 # A Connect Four Browser-Based Game
 
-## Connect Four is a classic 2 player game 
+#### Connect Four is a classic 2 player game that brings back happy childhood memories
 
-## Getting Started:
-link: https://peaceful-kashata-d078be.netlify.app/
+### Getting Started:
+Game link: https://peaceful-kashata-d078be.netlify.app/
 
 ### How to play:
 
@@ -18,6 +18,8 @@ link: https://peaceful-kashata-d078be.netlify.app/
 
 ![alt text](assets/Screenshot%20from%202022-09-14%2015-17-40.png)
 
-### Technologies used: JavaScript, HTML, CSS
+### Technologies used: 
+JavaScript, HTML, CSS
 
-### Next Steps: add scoreboard to count wins 
+### Next Steps: 
+add scoreboard to count wins 
