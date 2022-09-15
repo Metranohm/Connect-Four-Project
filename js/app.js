@@ -171,9 +171,12 @@ function render() {
   } else if (winner === 1) {
       messageEl.textContent = "Player One Wins!"
       const audioElement = new Audio('./assets/SGoinOnHere.mp3')
-      audioElement.play()
+      audioElement.play(); 
+      confetti.start(2000)
     } else if (winner === -1) {
       messageEl.textContent = "Player Two Wins!"
-    const audioElement = new Audio('./assets/SGoinOnHere.mp3')
-      audioElement.play();}
+      const audioElement = new Audio('./assets/SGoinOnHere.mp3')
+      audioElement.play();
+      confetti.start(2000)
+      ;}
   }
