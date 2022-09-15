@@ -12,7 +12,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(https://wallpapercrafter.com/th800/94850-synthwave-retrowave-artist-artwork-digital-art-hd-4k.jpg);
+  background-image: url(../assets/background.jpg);
 }
 
 section.board {
@@ -21,7 +21,7 @@ section.board {
   grid-template-columns: repeat(7, 10vmin);
   grid-gap: 1vmin;
   padding: 12px;
-  background-color: #e6e07c;
+  background-image: url();;
 }
 
 .sq0, .sq1, .sq2, .sq3, .sq4, .sq5, .sq6 {
@@ -30,7 +30,8 @@ section.board {
   padding: 22px 0 0 0;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  
+  background-image: url(../assets/ClickHere.png);
+  background-size: 100%;
 }
 
 div {
@@ -38,9 +39,8 @@ div {
   font-size: 8vmin;
   text-align: center;
   display: block;
-  background-color: yellow;
   border-radius: 50%;
-  
+  background-color: yellow;
 }
 
 h1 {

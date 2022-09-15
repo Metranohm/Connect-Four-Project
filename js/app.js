@@ -159,7 +159,7 @@ function render() {
     } else if (square === -1) {
       squareEls[idx].style.background= 'red'
     } else {
-      squareEls[idx].style.background= 'yellow'
+      squareEls[idx].style.background= ''
     }
   })
   if (winner === null) {
@@ -171,7 +171,11 @@ function render() {
   } else if (winner === 'T') {
     messageEl.textContent = "It's a tie!"
   } else if (winner === 1) {
-    messageEl.textContent = "Player One Wins!"
-    } else if (winner === -1)
-    messageEl.textContent = "Player Two Wins!"
+      messageEl.textContent = "Player One Wins!"
+      const audioElement = new Audio('./assets/Kick AdStyle 1.wav')
+      audioElement.play()
+    } else if (winner === -1) {
+      messageEl.textContent = "Player Two Wins!"
+    const audioElement = new Audio('./assets/Kick AdStyle 1.wav')
+      audioElement.play();}
   }
