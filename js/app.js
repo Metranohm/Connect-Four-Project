@@ -72,10 +72,6 @@ const winningCombos = [
     [12, 19, 26, 33],
     [13, 20, 27, 34],
 ]
-for (let index = 0; index < array.length; index++) {
-  const element = array[index];
-  
-}
 /*----------------------Variables (state) --------------------------*/
 
 let board, turn, winner
@@ -86,7 +82,7 @@ const squareEls = document.querySelectorAll(".board > div")
 const messageEl = document.querySelector("#message")
 const boardEl = document.querySelector('.board')
 const resetBtnEl = document.querySelector('#reset-button')
-const favicon = document.querySelector(#favicon)
+// const favicon = document.querySelector(#)
 
 /*--------------------------- Event Listeners -----------------------*/
 
@@ -94,10 +90,6 @@ boardEl.addEventListener('click', handleClick)
 resetBtnEl.addEventListener('click', init)
 
 /*------------------------------ Functions --------------------------*/
-
-function handleBtn(e) {
-  console.log(e.target.id)
-}
 
 init()
 
@@ -119,9 +111,7 @@ function init() {
 
 function handleClick(evt) {
   console.log(evt.target.id);
-  //converts id of target div into a number (with parseInt), assigns that number to variable sqIdx
   let sqIdx = parseInt(evt.target.id.replace('sq', ''))
-  console.log(sqIdx)
   if (sqIdx > 6)
   return
   if (isNaN(sqIdx)) {
@@ -133,11 +123,8 @@ function handleClick(evt) {
   if (board[sqIdx]) {
     return 
   }
-  // changeFavicon()
   const correctIdx = checkPlacement(sqIdx)
-  console.log('correct placement', correctIdx);
   board[correctIdx] = turn 
-  // console.log('board after click', board);
   turn = turn * -1 
   winner = getWinner()
   render()
@@ -166,7 +153,7 @@ function getWinner() {
 }
 
 function render() {
-console.log(board) 
+
   board.forEach(function(square, idx) {
     if (square === 1) {
       squareEls[idx].style.background = 'black'
