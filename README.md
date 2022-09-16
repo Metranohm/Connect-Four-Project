@@ -23,6 +23,6 @@ JavaScript, HTML, CSS
 
 ### Iceboxes: 
 1. Add scoreboard to count wins from multiple plays
-2. Add dark more
+2. Add dark mode
 3. Add more sound effects
 4. Add computer opponent
