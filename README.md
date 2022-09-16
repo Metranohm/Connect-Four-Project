@@ -21,5 +21,8 @@ Game link: https://peaceful-kashata-d078be.netlify.app/
 ### Technologies used: 
 JavaScript, HTML, CSS
 
-### Next Steps: 
-Add scoreboard to count wins from multiple plays
+### Iceboxes: 
+1. Add scoreboard to count wins from multiple plays
+2. Add dark more
+3. Add more sound effects
+4. Add computer opponent
